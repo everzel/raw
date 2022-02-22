@@ -1,5 +1,5 @@
 {
-  "name": "@editorjs/raw",
+  "name": "@everzel/raw-insert",
   "version": "2.3.0",
   "keywords": [
     "codex editor",
@@ -9,7 +9,7 @@
   ],
   "description": "Raw HTML Tool for Editor.js",
   "license": "MIT",
-  "repository": "https://github.com/editor-js/raw",
+  "repository": "https://github.com/everzel/raw",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack --mode production",

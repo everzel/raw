@@ -14,7 +14,7 @@ import './index.css';
 /**
  *
  */
-export default class RawTool {
+export default class RawInsertTool {
   /**
    * Notify core that read-only mode is supported
    *
@@ -35,7 +35,7 @@ export default class RawTool {
   }
 
   /**
-   * Allow to press Enter inside the RawTool textarea
+   * Allow to press Enter inside the RawInsertTool textarea
    *
    * @returns {boolean}
    * @public
@@ -53,7 +53,58 @@ export default class RawTool {
    */
   static get toolbox() {
     return {
-      icon: '<svg width="19" height="13"><path d="M18.004 5.794c.24.422.18.968-.18 1.328l-4.943 4.943a1.105 1.105 0 1 1-1.562-1.562l4.162-4.162-4.103-4.103A1.125 1.125 0 1 1 12.97.648l4.796 4.796c.104.104.184.223.239.35zm-15.142.547l4.162 4.162a1.105 1.105 0 1 1-1.562 1.562L.519 7.122c-.36-.36-.42-.906-.18-1.328a1.13 1.13 0 0 1 .239-.35L5.374.647a1.125 1.125 0 0 1 1.591 1.591L2.862 6.341z"/></svg>',
+      icon: '<svg version="1.1" width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">\n' +
+          '<g>\n' +
+          '\t<g>\n' +
+          '\t\t<g>\n' +
+          '\t\t\t<path d="M282.503,149.97c-11.43-2.858-23.013,4.092-25.87,15.522l-42.667,170.667c-2.858,11.43,4.092,23.013,15.522,25.87\n' +
+          '\t\t\t\ts23.013-4.092,25.87-15.522l42.667-170.667C300.883,164.41,293.933,152.828,282.503,149.97z"></path>\n' +
+          '\t\t\t<path d="M170.662,234.667V192c11.782,0,21.333-9.551,21.333-21.333c0-11.782-9.551-21.333-21.333-21.333\n' +
+          '\t\t\t\tc-25.201,0-42.667,17.466-42.667,42.667v33.83l-15.085,15.085c-8.331,8.331-8.331,21.839,0,30.17l15.085,15.085V320\n' +
+          '\t\t\t\tc0,25.201,17.466,42.667,42.667,42.667c11.782,0,21.333-9.551,21.333-21.333c0-11.782-9.551-21.333-21.333-21.333v-42.667\n' +
+          '\t\t\t\tc0-5.658-2.248-11.084-6.248-15.085L158.166,256l6.248-6.248C168.415,245.751,170.662,240.325,170.662,234.667z"></path>\n' +
+          '\t\t\t<path d="M383.996,225.83V192c0-25.201-17.466-42.667-42.667-42.667c-11.782,0-21.333,9.551-21.333,21.333\n' +
+          '\t\t\t\tc0,11.782,9.551,21.333,21.333,21.333v42.667c0,5.658,2.248,11.084,6.248,15.085l6.248,6.248l-6.248,6.248\n' +
+          '\t\t\t\tc-4.001,4.001-6.248,9.427-6.248,15.085V320c-11.782,0-21.333,9.551-21.333,21.333c0,11.782,9.551,21.333,21.333,21.333\n' +
+          '\t\t\t\tc25.201,0,42.667-17.466,42.667-42.667v-33.83l15.085-15.085c8.331-8.331,8.331-21.839,0-30.17L383.996,225.83z"></path>\n' +
+          '\t\t\t<path d="M426.731,0H85.269C38.181,0,0,38.181,0,85.269v341.461C0,473.819,38.181,512,85.269,512h341.461\n' +
+          '\t\t\t\tC473.819,512,512,473.819,512,426.731V85.269C512,38.181,473.819,0,426.731,0z M469.333,426.731\n' +
+          '\t\t\t\tc0,23.525-19.078,42.603-42.603,42.603H85.269c-23.525,0-42.603-19.078-42.603-42.603V85.269\n' +
+          '\t\t\t\tc0-23.525,19.078-42.603,42.603-42.603h341.461c23.525,0,42.603,19.078,42.603,42.603V426.731z"></path>\n' +
+          '\t\t</g>\n' +
+          '\t</g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '<g>\n' +
+          '</g>\n' +
+          '</svg>',
       title: 'Raw HTML',
     };
   }
@@ -76,7 +127,7 @@ export default class RawTool {
     this.api = api;
     this.readOnly = readOnly;
 
-    this.placeholder = config.placeholder || RawTool.DEFAULT_PLACEHOLDER;
+    this.placeholder = config.placeholder || RawInsertTool.DEFAULT_PLACEHOLDER;
 
     this.CSS = {
       baseClass: this.api.styles.block,
@@ -96,7 +147,7 @@ export default class RawTool {
   /**
    * Return Tool's view
    *
-   * @returns {HTMLDivElement} this.element - RawTool's wrapper
+   * @returns {HTMLDivElement} this.element - RawInsertTool's wrapper
    * @public
    */
   render() {
@@ -132,7 +183,7 @@ export default class RawTool {
   /**
    * Extract Tool's data from the view
    *
-   * @param {HTMLDivElement} rawToolsWrapper - RawTool's wrapper, containing textarea with raw HTML code
+   * @param {HTMLDivElement} rawToolsWrapper - RawInsertTool's wrapper, containing textarea with raw HTML code
    * @returns {RawData} - raw HTML code
    * @public
    */
@@ -143,7 +194,7 @@ export default class RawTool {
   }
 
   /**
-   * Default placeholder for RawTool's textarea
+   * Default placeholder for RawInsertTool's textarea
    *
    * @public
    * @returns {string}

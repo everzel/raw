@@ -19,7 +19,7 @@ npm i --save-dev @editorjs/raw
 Include module at your application
 
 ```javascript
-const RawTool = require('@editorjs/raw');
+const RawInsertTool = require('@editorjs/raw');
 ```
 
 ### Download to your project's source dir
@@ -49,7 +49,7 @@ var editor = CodexEditor({
   
   tools: {
     ...
-    raw: RawTool,
+    raw: RawInsertTool,
   }
   
   ...
