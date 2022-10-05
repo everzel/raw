@@ -105,7 +105,7 @@ export default class RawInsertTool {
           '<g>\n' +
           '</g>\n' +
           '</svg>',
-      title: 'Raw insert HTML',
+      title: 'Вставка HTML',
     };
   }
 
